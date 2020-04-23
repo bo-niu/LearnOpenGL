@@ -47,9 +47,6 @@
     <ClCompile Include="Texture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BoMath\MatrixX.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="vertex.shader">
@@ -86,9 +83,10 @@
     </ClInclude>
     <ClInclude Include="BoMath\BoMatrix.h" />
     <ClInclude Include="BoMath\BoQuaternion.h" />
-    <ClInclude Include="BoMath\Matrix.hpp" />
-    <ClInclude Include="BoMath\Quaternion.h" />
-    <ClInclude Include="BoMath\MatrixX.h" />
-    <ClInclude Include="BoMath\Matrix4.h" />
+    <ClInclude Include="BoMath\includes\Matrix.hpp" />
+    <ClInclude Include="BoMath\includes\Matrix4.h" />
+    <ClInclude Include="BoMath\includes\MatrixX.h" />
+    <ClInclude Include="BoMath\includes\Quaternion.h" />
+    <ClInclude Include="BoMath\includes\VectorX.h" />
   </ItemGroup>
 </Project>

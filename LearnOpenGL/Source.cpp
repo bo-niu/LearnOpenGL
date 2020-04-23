@@ -218,11 +218,18 @@ int main() {
 
 	{
 
+		//////test quaternion/////////////////////////////////
 		BoQuaternionF qTotal;
 		float angle = 0.01;
 		//BoQuaternionF qRotate = BoQuaternionF::generateQuaternion(-1, 4, 0, angle);
 		BoQuaternionF qRotate = BoQuaternionF::generateQuaternion(0, 0, 1, angle);
+		//////////////////////////////////////////////////////
 
+
+		///////test BoMatrix4f/////////////////////////////////
+		BoMatrix4f matTotal;
+		BoMatrix4f matRotate = BoMatrix4f::rotate(0, 0, 0.01);
+		//////////////////////////////////////////////////////
 
 		unsigned int indices[] = {
 			0,1,2,
@@ -251,9 +258,10 @@ int main() {
 			float positionsFinal[8] = { 0,0,0,0,0,0,0,0 };
 			qTotal = qRotate * qTotal;
 			for (int i = 0; i < 4; i++) {
-				BoMatrixXf m(4, 1);
-				m << positions[2 * i], positions[2 * i + 1], 0, 0;
-				BoMatrixXf m2 = qTotal.toMatrix()/*.inverse()*/ * m;
+				BoVector4f v;
+				v << positions[2 * i], positions[2 * i + 1], 0, 0;
+				BoMatrixXf m2 = qTotal.toMatrix()/*.inverse()*/ * v;
+				//BoMatrixXf m2 = matTotal * v;
 				positionsFinal[2 * i] = m2[0][0];
 				positionsFinal[2 * i + 1] = m2[1][0];
 			}

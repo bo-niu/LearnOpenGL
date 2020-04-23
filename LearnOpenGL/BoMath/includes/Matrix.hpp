@@ -25,8 +25,8 @@ namespace Bo {
 
 		Matrix(size_t s) {
 			assert(s > 0);
-			_rows = rows;
-			_cols = cols;
+			_rows = s;
+			_cols = s;
 
 			_mat = new T * [s];
 			for (int i = 0; i < s; i++)
@@ -230,8 +230,7 @@ namespace Bo {
 				//subtract each row by a ratio of the ith row
 				//the target is to make the ith col zero
 				for (int j = 0; j < _rows; j++){
-					if (i != j)
-					{
+					if (i != j) {
                         T t = m[j][i];
 						for (int k = 0; k < 2 * _cols; k++)
 							m[j][k] = m[j][k] - t * m[i][k];
@@ -241,8 +240,7 @@ namespace Bo {
 
             Matrix<T> inv(_rows, _rows);
             for (int i = 0; i < _rows; i++) {
-                for (int j = 0; j < _rows; j++)
-                {
+                for (int j = 0; j < _rows; j++) {
                     inv[i][j] = m[i][j + _rows];
                 }
             }
