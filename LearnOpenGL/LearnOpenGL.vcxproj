@@ -145,10 +145,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="IndexBuffer.cpp" />
+    <ClCompile Include="BoMath\MatrixX.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="SourceSketch.cpp" />
+    <ClCompile Include="stb_image.cpp" />
+    <ClCompile Include="Texture.cpp" />
     <ClCompile Include="VertexArray.cpp" />
     <ClCompile Include="VertexBuffer.cpp" />
     <ClCompile Include="VertexBufferLayout.cpp" />
@@ -158,9 +161,17 @@
     <None Include="vertex.shader" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BoMath\BoMatrix.h" />
+    <ClInclude Include="BoMath\BoQuaternion.h" />
+    <ClInclude Include="BoMath\Matrix.hpp" />
+    <ClInclude Include="BoMath\Matrix4.h" />
+    <ClInclude Include="BoMath\Quaternion.h" />
     <ClInclude Include="IndexBuffer.h" />
+    <ClInclude Include="BoMath\MatrixX.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="Shader.h" />
+    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="Texture.h" />
     <ClInclude Include="VertexArray.h" />
     <ClInclude Include="VertexBuffer.h" />
     <ClInclude Include="VertexBufferLayout.h" />
