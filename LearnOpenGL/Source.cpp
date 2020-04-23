@@ -228,7 +228,10 @@ int main() {
 
 		///////test BoMatrix4f/////////////////////////////////
 		BoMatrix4f matTotal;
-		BoMatrix4f matRotate = BoMatrix4f::rotate(0, 0, 0.01);
+		BoMatrix4f matRotate = BoMatrix4f::rotateZ(/*0, 0, */0.001);
+		std::cout << "matTotal: \n" << matTotal << std::endl;
+		std::cout << "matRotate: \n" << matRotate << std::endl;
+		std::cout << "matRotate * matTotal: \n" << matRotate * matTotal << std::endl;
 		//////////////////////////////////////////////////////
 
 		unsigned int indices[] = {
@@ -260,10 +263,18 @@ int main() {
 			for (int i = 0; i < 4; i++) {
 				BoVector4f v;
 				v << positions[2 * i], positions[2 * i + 1], 0, 0;
-				BoMatrixXf m2 = qTotal.toMatrix()/*.inverse()*/ * v;
-				//BoMatrixXf m2 = matTotal * v;
-				positionsFinal[2 * i] = m2[0][0];
-				positionsFinal[2 * i + 1] = m2[1][0];
+				//BoMatrixXf m2 = qTotal.toMatrix()/*.inverse()*/ * v;
+				std::cout << "v: \n" << v << std::endl;
+				std::cout << "matRotate: \n" << matRotate << std::endl;
+				std::cout << "matTotal: \n" << matTotal << std::endl;
+				std::cout << "matRotate* matTotal: \n" << matRotate * matTotal << std::endl;
+				matTotal = matRotate * matTotal;
+				
+				std::cout << "matTotal: \n" << matTotal << std::endl;
+				BoVector4f v2 = matTotal * v;
+				std::cout << "v2: \n" << v2 << std::endl;
+				positionsFinal[2 * i] = v2[0];
+				positionsFinal[2 * i + 1] = v2[1];
 			}
 
 

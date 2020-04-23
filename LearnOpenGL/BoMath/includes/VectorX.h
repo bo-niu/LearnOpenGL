@@ -12,14 +12,19 @@ namespace Bo {
 
 		~VectorX() {};
 
-		VectorX(const Matrix<T>& m) : Matrix<T>(L, 1) {
-			assert(m._cols == 1);
+		VectorX(const Matrix<T>& m) : Matrix<T>(m) {
+			assert(m.getCols() == 1);
 		};
 
 		size_t size() { return this->_rows; }
 
-		void normalize() {
+		inline T& operator[](const size_t& index) const {
+			return this->_mat[index][0];
+		}
 
+		void normalize() {
+			std::cout << "not finished." << std::endl;
+			assert(false);
 		}
 
 	};

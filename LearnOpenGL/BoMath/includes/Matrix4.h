@@ -15,7 +15,7 @@ namespace Bo {
 		};
 		~Matrix4() {};
 
-		Matrix4(const Matrix<T>& m) : MatrixX<T, 4>() {};
+		Matrix4(const Matrix<T>& m) : MatrixX<T, 4>(m) {};
 
 		static Matrix4<T> rotateX(T roll) {
 			Matrix4<T> m;
