@@ -13,7 +13,7 @@ namespace Bo {
 		~VectorX() {};
 
 		VectorX(const Matrix<T>& m) : Matrix<T>(m) {
-			assert(m.getCols() == 1);
+			assert(m.getCols() == 1 && m.getRows() == L);
 		};
 
 		size_t size() { return this->_rows; }

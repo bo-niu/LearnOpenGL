@@ -61,7 +61,7 @@ namespace Bo {
                     _mat[i][j] = matrix[i][j];
         }
 
-        virtual ~Matrix() {
+        /*virtual*/ ~Matrix() {
             if (_mat == nullptr)return;
             for (int i = 0; i < _rows; i++)
                 delete[] _mat[i];
@@ -89,23 +89,21 @@ namespace Bo {
 //        T *getArray() const;
 
         void operator=(const Matrix<T> &matrix) {
-            //for (int i = 0; i < matrix._rows; i++)
-            //    for (int j = 0; j < matrix._cols; j++)
-            //        _mat[i][j] = matrix[i][j];
-            //_rows = matrix._rows;
-            //_cols = matrix._cols;
 
-            if (_mat != nullptr) {
+            if (this->_rows != matrix.getRows() || this->_cols != matrix.getCols()) {
+				if (_mat != nullptr) {
+					for (int i = 0; i < _rows; i++)
+						delete[] _mat[i];
+					delete[] _mat;
+				}
+				_rows = matrix.getRows();
+				_cols = matrix.getCols();
+
+				_mat = new T * [_rows];
 				for (int i = 0; i < _rows; i++)
-					delete[] _mat[i];
-				delete[] _mat;
+					_mat[i] = new T[_cols];
             }
-			_rows = matrix.getRows();
-			_cols = matrix.getCols();
-
-			_mat = new T * [_rows];
-			for (int i = 0; i < _rows; i++)
-				_mat[i] = new T[_cols];
+			
 			for (int i = 0; i < _rows; i++)
 				for (int j = 0; j < _cols; j++)
                     _mat[i][j] = matrix[i][j];

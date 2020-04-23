@@ -228,7 +228,7 @@ int main() {
 
 		///////test BoMatrix4f/////////////////////////////////
 		BoMatrix4f matTotal;
-		BoMatrix4f matRotate = BoMatrix4f::rotateZ(/*0, 0, */0.001);
+		BoMatrix4f matRotate = BoMatrix4f::rotate(0.002, 0.003, 0.001);
 		std::cout << "matTotal: \n" << matTotal << std::endl;
 		std::cout << "matRotate: \n" << matRotate << std::endl;
 		std::cout << "matRotate * matTotal: \n" << matRotate * matTotal << std::endl;

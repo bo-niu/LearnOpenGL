@@ -13,7 +13,7 @@ namespace Bo {
 		~MatrixX() {};
 
 		MatrixX(const Matrix<T>& m) : Matrix<T>(m) {
-			assert(m.getCols() == m.getRows());
+			assert(m.getCols() == m.getRows() && m.getRows() == L);
 			for (int i = 0; i < this->_rows; i++) {
 				memcpy_s(this->_mat[i], sizeof(T) * this->_cols, m[i], sizeof(T) * this->_cols);
 			}
