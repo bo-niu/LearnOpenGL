@@ -23,8 +23,21 @@ namespace Bo {
 		}
 
 		void normalize() {
-			std::cout << "not finished." << std::endl;
-			assert(false);
+			T l = 0;
+			for (int i = 0; i < this->_rows; i++) {
+				l += this->_mat[i][0] * this->_mat[i][0];
+			}
+			l = sqrt(l);
+			for (int i = 0; i < this->_rows; i++)
+				this->_mat[i][0] = this->_mat[i][0] / l;
+		}
+
+		T dotProduct(const VectorX<T, L>& v) {
+			T dot = 0;
+			for (int i = 0; i < this->_rows; i++) {
+				dot += this->_mat[i][0] * v[i];
+			}
+			return dot;
 		}
 
 	};

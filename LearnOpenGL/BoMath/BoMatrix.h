@@ -7,7 +7,7 @@
 
 #include "includes/Matrix.hpp"
 #include "includes/Matrix4.h"
-#include "includes/VectorX.h"
+#include "includes/VectorNum.h"
 
 typedef Bo::Matrix<double> BoMatrixXd;
 typedef Bo::Matrix<int> BoMatrixXi;
@@ -21,6 +21,8 @@ typedef Bo::VectorX<float, 4> BoVector4f;
 typedef Bo::VectorX<double, 4> BoVector4d;
 typedef Bo::VectorX<int, 4> BoVector4i;
 
-
+typedef Bo::Vector3<float> BoVector3f;
+typedef Bo::Vector3<double> BoVector3d;
+typedef Bo::Vector3<int> BoVector3i;
 
 #endif //BOMATRIX_BOMATRIX_H
