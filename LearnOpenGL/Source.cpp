@@ -26,7 +26,7 @@
 #include "BoMath/BoMatrix.h"
 
 #include "common/objloader.hpp"
-#include "common/shader1.hpp"
+#include "common/shader.hpp"
 #include "common/texture1.hpp"
 #include "imgui/imgui.h"
 #include "imgui/imgui_impl_glfw.h"

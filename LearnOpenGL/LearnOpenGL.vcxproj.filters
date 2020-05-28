@@ -26,30 +26,6 @@
     <ClCompile Include="stb_image.cpp">
       <Filter>Source Files\vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="common\controls.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="common\objloader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="common\quaternion_utils.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="common\tangentspace.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="common\text2D.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="common\vboindexer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="common\shader1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="common\texture1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="IndexBuffer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -89,6 +65,30 @@
     <ClCompile Include="imgui\imgui_impl_opengl3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="common\controls.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\objloader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\quaternion_utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\tangentspace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\text2D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\texture1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\vboindexer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="vertex.shader">
@@ -113,14 +113,6 @@
     <ClInclude Include="BoMath\includes\VectorX.h" />
     <ClInclude Include="BoMath\includes\VectorNum.h" />
     <ClInclude Include="objLoader\objloader.hpp" />
-    <ClInclude Include="common\controls.hpp" />
-    <ClInclude Include="common\objloader.hpp" />
-    <ClInclude Include="common\quaternion_utils.hpp" />
-    <ClInclude Include="common\tangentspace.hpp" />
-    <ClInclude Include="common\text2D.hpp" />
-    <ClInclude Include="common\vboindexer.hpp" />
-    <ClInclude Include="common\shader1.hpp" />
-    <ClInclude Include="common\texture1.hpp" />
     <ClInclude Include="IndexBuffer.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="Shader.h" />
@@ -136,6 +128,14 @@
     <ClInclude Include="imgui\imstb_truetype.h" />
     <ClInclude Include="imgui\imgui_impl_glfw.h" />
     <ClInclude Include="imgui\imgui_impl_opengl3.h" />
+    <ClInclude Include="common\controls.hpp" />
+    <ClInclude Include="common\objloader.hpp" />
+    <ClInclude Include="common\quaternion_utils.hpp" />
+    <ClInclude Include="common\shader.hpp" />
+    <ClInclude Include="common\tangentspace.hpp" />
+    <ClInclude Include="common\text2D.hpp" />
+    <ClInclude Include="common\texture1.hpp" />
+    <ClInclude Include="common\vboindexer.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="uvmap.DDS" />

@@ -1,10 +1,11 @@
-#pragma once
+#ifndef BO_SHADER_H
+#define BO_SHADER_H
+
 #include <string>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <fstream>
-#pragma once
 #include <stdio.h>
 #include <unordered_map>
 #include "glm/glm.hpp"
@@ -37,3 +38,4 @@ private:
 	char* filetobuf(const char* file);
 };
 
+#endif
