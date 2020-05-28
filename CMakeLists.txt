@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.15)
 project(LearnOpenGL)
 
 set(CMAKE_CXX_STANDARD 11)
@@ -35,10 +35,11 @@ find_package (OpenGL REQUIRED)
 if (WIN32)
     target_compile_definitions(LearnOpenGL PUBLIC GLEW_STATIC )
     target_include_directories(LearnOpenGL PUBLIC "Dependencies/glfw-3.3.2.bin.WIN64/include")
-    target_link_directories(LearnOpenGL PUBLIC "Dependencies/glfw-3.3.2.bin.WIN64/lib-mingw-w64" )
+    target_link_directories(LearnOpenGL PUBLIC "Dependencies/glfw-3.3.2.bin.WIN64/lib-vc2019" )
     target_include_directories(LearnOpenGL PUBLIC Dependencies)
     target_include_directories(LearnOpenGL PUBLIC "Dependencies/glew-2.1.0/include")
-    target_link_directories(LearnOpenGL PUBLIC "Dependencies/glew-2.1.0/build/cmake/lib")
+    #target_link_directories(LearnOpenGL PUBLIC "Dependencies/glew-2.1.0/build/cmake/lib")
+    target_link_directories(LearnOpenGL PUBLIC "Dependencies/glew-2.1.0/lib/Release/x64")
 else (WIN32)
     find_package (glfw3 REQUIRED)
     find_package (GLM REQUIRED)
@@ -66,7 +67,13 @@ endif (APPLE)
 
 if (WIN32)
     target_link_libraries (LearnOpenGL
-            ${OPENGL_LIBRARIES} libglfw3.a libglew32.a glu32 opengl32)
+            ${OPENGL_LIBRARIES} glfw3 glew32s glu32 opengl32)
+    set_target_properties(LearnOpenGL PROPERTIES
+    VS_DEBUGGER_WORKING_DIRECTORY ${PROJECT_BUILD_DIR}/Debug)
+    set_property(TARGET LearnOpenGL PROPERTY VS_DEBUGGER_WORKING_DIRECTORY "C:/delete/LearnOpenGL")
+    message("my VS_DEBUGGER_WORKING_DIRECTORY: ${VS_DEBUGGER_WORKING_DIRECTORY}")
+    message("my CMAKE_SOURCE_DIR: ${CMAKE_SOURCE_DIR}")
+    
 endif (WIN32)
 
 if (UNIX)

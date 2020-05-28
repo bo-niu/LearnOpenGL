@@ -10,7 +10,8 @@
 #define _USE_MATH_DEFINES
 #include <cassert>
 #include <cmath>
-//#include <cstring>
+#include <cstring>
+#include <string>
 #include <vector>
 #include "Matrix.hpp"
 

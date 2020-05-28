@@ -69,7 +69,7 @@ int main() {
         glBufferData(GL_ARRAY_BUFFER, 4 * 4 * sizeof(float), positions, GL_STATIC_DRAW);//1. buffer type. 2. size of buffer. 3. the real buffer. 4. usage hint
 
         std::vector<VertexBufferElement> layoutElements;
-        unsigned int layoutStride;
+        unsigned int layoutStride = 0;
         layoutElements.push_back({ GL_FLOAT, 2, GL_FALSE });
         layoutStride += VertexBufferElement::GetSizeOfType(GL_FLOAT) * 2;
         layoutElements.push_back({ GL_FLOAT, 2, GL_FALSE });

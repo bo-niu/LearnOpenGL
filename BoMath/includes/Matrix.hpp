@@ -10,6 +10,7 @@
 #include <time.h>
 #include <fstream>
 #include<istream>
+#include <cstring>
 #include <string>
 #include <sstream>
 #include <cassert>

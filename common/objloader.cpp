@@ -1,8 +1,7 @@
 #include <vector>
 #include <stdio.h>
+#include <cstring>
 #include <string>
-//#include <cstring>
-
 #include <glm/glm.hpp>
 
 #include "objloader.hpp"

@@ -4,6 +4,7 @@
 
 #ifndef LEARNOPENGL_GLOBALUTIL_H
 #define LEARNOPENGL_GLOBALUTIL_H
+#include <cstring>
 #include <string>
 #include <vector>
 #include <GL/glew.h>
@@ -61,10 +62,11 @@ char* filetobuf(const char* file)
     FILE* fptr;
     long length;
     char* buf;
-
-    fopen_s(&fptr, file, "rb"); /* Open file for reading */
+    std::string str(file);
+    std::string realFile = str;//std::string("C:/delete/LearnOpenGL/") + str;
+    fopen_s(&fptr, realFile.c_str(), "rb"); /* Open file for reading */
     if (!fptr) /* Return NULL on failure */{
-        assert(!fptr);
+        assert(fptr);
         return NULL;
     }
 
