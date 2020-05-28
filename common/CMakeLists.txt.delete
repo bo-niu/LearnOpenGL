@@ -1,0 +1,7 @@
+add_library(common_lib STATIC controls.cpp controls.hpp objloader.cpp objloader.hpp quaternion_utils.cpp quaternion_utils.hpp
+        shader1.cpp shader1.hpp tangentspace.cpp tangentspace.hpp text2D.cpp text2D.hpp texture1.cpp texture1.hpp
+        vboindexer.cpp vboindexer.hpp)
+
+target_link_libraries(common_lib PUBLIC Opengl32.lib glfw3.lib)
+target_include_directories(common_lib PUBLIC Dependencies/glfw-3.3/include)
+target_link_directories(common_lib PUBLIC Dependencies/glfw-3.3/libs/Release)

@@ -1,7 +1,0 @@
-﻿  Building Custom Rule D:/project/glfw-3.3/tests/CMakeLists.txt
-  events.c
-  getopt.c
-  glad_gl.c
-  正在生成代码...
-  events.vcxproj -> D:\project\glfw-3.3\build\tests\Debug\events.exe
-  events.vcxproj -> D:/project/glfw-3.3/build/tests/Debug/events.pdb (Full PDB)
